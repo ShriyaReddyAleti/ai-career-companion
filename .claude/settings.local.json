@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x /Users/shriyareddyaleti/Desktop/Project/ai-career-companion/setup-phase3.sh)",
+      "Bash(bash setup-phase3.sh)",
+      "Bash(curl -s http://localhost:8005/health)",
+      "Bash(curl -s http://localhost:8006/health)",
+      "Bash(npm --version)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(curl *)",
+      "Bash(docker exec career_postgres *)",
+      "Bash(pkill -f \"node.*api-gateway\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3 -c ' *)",
+      "Bash(lsof -ti:8001)",
+      "Bash(xargs kill -9)",
+      "Bash(psql postgresql://postgres:password@localhost:5432/ai_career_companion -c \"SELECT id, title, company, description FROM job_listings LIMIT 5;\")",
+      "Bash(psql -U postgres -d ai_career_companion -c \"SELECT id, title, company, description FROM job_listings LIMIT 5;\")",
+      "Bash(PGPASSWORD=your_secure_password_here psql *)",
+      "Bash(node *)",
+      "Bash(lsof -ti:3000)",
+      "Bash(npx next *)",
+      "Bash(lsof -ti:3000 -ti:3001)",
+      "Bash(lsof -nP -iTCP:3000 -sTCP:LISTEN)",
+      "Bash(lsof -nP -iTCP:3001 -sTCP:LISTEN)",
+      "Bash(/Users/shriyareddyaleti/Desktop/Project/ai-career-companion/backend/services/ats-scorer/venv/bin/pip show *)",
+      "Bash(/Users/shriyareddyaleti/Desktop/Project/ai-career-companion/backend/services/resume-parser/venv/bin/pip show *)",
+      "Bash(/Users/shriyareddyaleti/Desktop/Project/ai-career-companion/backend/services/ats-scorer/venv/bin/pip install *)",
+      "Bash(/Users/shriyareddyaleti/Desktop/Project/ai-career-companion/backend/services/resume-parser/venv/bin/pip install *)",
+      "Bash(wait)",
+      "Bash(lsof -ti:8002)",
+      "Bash(xargs rm -rf)"
+    ]
+  }
+}
