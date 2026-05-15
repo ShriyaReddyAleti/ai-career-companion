@@ -143,7 +143,7 @@ function Message({ msg, mode }) {
       }`}>
         {isUser ? "You" : "AI"}
       </div>
-      <div className={`max-w-[78%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
+      <div className={`max-w-[85%] md:max-w-[78%] px-3 md:px-4 py-3 rounded-2xl text-sm leading-relaxed ${
         isUser
           ? `${modeColor.btn} text-white rounded-tr-none`
           : "bg-white border border-gray-200 text-gray-800 rounded-tl-none shadow-sm"
@@ -245,10 +245,10 @@ function ChatContent() {
 
   return (
     <ProtectedLayout>
-      <div className="flex h-screen overflow-hidden bg-gray-50">
+      <div className="flex overflow-hidden bg-gray-50 h-[calc(100vh-3.5rem-5rem)] md:h-screen">
 
-        {/* ── Sidebar ── */}
-        <div className="w-64 flex-shrink-0 border-r border-gray-200 bg-white flex flex-col">
+        {/* ── Sidebar (desktop only) ── */}
+        <div className="hidden md:flex w-64 flex-shrink-0 border-r border-gray-200 bg-white flex-col">
           <div className="p-4 border-b border-gray-100">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Mode</p>
             <div className="space-y-1.5">
@@ -313,24 +313,37 @@ function ChatContent() {
         {/* ── Main ── */}
         <div className="flex-1 flex flex-col overflow-hidden">
           {/* Header */}
-          <div className="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between flex-shrink-0">
-            <div className="flex items-center gap-3">
-              <div className={`w-9 h-9 rounded-xl ${mc.btn} flex items-center justify-center text-lg`}>
-                {currentMode.icon}
+          <div className="bg-white border-b border-gray-200 px-4 md:px-6 py-3 flex-shrink-0">
+            <div className="flex items-center justify-between mb-2 md:mb-0">
+              <div className="flex items-center gap-3">
+                <div className={`w-8 h-8 md:w-9 md:h-9 rounded-xl ${mc.btn} flex items-center justify-center text-base md:text-lg`}>
+                  {currentMode.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900 text-sm">{currentMode.label}</p>
+                  <p className="text-xs text-gray-400 hidden md:block">{currentMode.desc}</p>
+                </div>
               </div>
-              <div>
-                <p className="font-bold text-gray-900 text-sm">{currentMode.label}</p>
-                <p className="text-xs text-gray-400">{currentMode.desc}</p>
-              </div>
+              <Link href="/interview"
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-600 text-white text-xs font-semibold rounded-lg hover:bg-violet-700 transition-colors">
+                🎤 Interview
+              </Link>
             </div>
-            <Link href="/interview"
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-600 text-white text-xs font-semibold rounded-lg hover:bg-violet-700 transition-colors">
-              🎤 Mock Interview
-            </Link>
+            {/* Mobile mode tabs */}
+            <div className="md:hidden flex gap-1 mt-2 overflow-x-auto pb-1">
+              {MODES.map(m => (
+                <button key={m.key} onClick={() => { setMode(m.key); startNew(m.key); }}
+                  className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                    mode === m.key ? `${COLOR[m.color].badge} border border-current` : "text-gray-500 bg-gray-100"
+                  }`}>
+                  <span>{m.icon}</span> {m.label}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto px-6 py-6 space-y-4">
+          <div className="flex-1 overflow-y-auto px-3 md:px-6 py-4 md:py-6 space-y-4">
             {!activeConvId && messages.length === 0 && (
               <div className="flex flex-col items-center justify-center h-full text-center">
                 <div className={`w-16 h-16 rounded-2xl ${mc.btn} flex items-center justify-center text-3xl mb-4`}>
@@ -371,7 +384,7 @@ function ChatContent() {
           </div>
 
           {/* Input */}
-          <div className="bg-white border-t border-gray-200 px-6 py-4 flex-shrink-0">
+          <div className="bg-white border-t border-gray-200 px-3 md:px-6 py-3 md:py-4 flex-shrink-0">
             <div className="flex gap-3 items-end max-w-4xl mx-auto">
               <textarea
                 ref={inputRef}

@@ -248,7 +248,7 @@ function SkillsContent() {
       <div className="min-h-screen bg-gray-50">
 
         {/* Page header */}
-        <div className="bg-white border-b border-gray-100 px-8 py-6">
+        <div className="bg-white border-b border-gray-100 px-4 md:px-8 py-4 md:py-6">
           <div className="max-w-5xl mx-auto">
             <h1 className="text-2xl font-bold text-gray-900">Skill Gap Analysis</h1>
             <p className="text-sm text-gray-500 mt-0.5">
@@ -257,7 +257,7 @@ function SkillsContent() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-8 py-8 space-y-8">
+        <div className="max-w-5xl mx-auto px-4 md:px-8 py-4 md:py-8 space-y-6 md:space-y-8">
 
           {/* Role picker card */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">

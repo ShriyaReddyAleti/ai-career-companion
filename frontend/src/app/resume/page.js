@@ -359,7 +359,7 @@ function ResumePageInner() {
 
   return (
     <ProtectedLayout>
-      <div className="p-8 max-w-5xl mx-auto">
+      <div className="p-4 md:p-8 max-w-5xl mx-auto">
         <div className="mb-7">
           <h1 className="text-2xl font-bold text-gray-900">Resume</h1>
           <p className="text-gray-500 mt-1">Upload your resume to parse skills and score against job listings.</p>

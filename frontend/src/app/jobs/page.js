@@ -365,7 +365,7 @@ export default function JobsPage() {
       <div className="min-h-screen bg-gray-50">
 
         {/* Page header */}
-        <div className="bg-white border-b border-gray-100 px-8 py-6">
+        <div className="bg-white border-b border-gray-100 px-4 md:px-8 py-4 md:py-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div>
@@ -392,7 +392,7 @@ export default function JobsPage() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-8 py-6">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-4 md:py-6">
 
           {/* No resume banner */}
           {noResume && (

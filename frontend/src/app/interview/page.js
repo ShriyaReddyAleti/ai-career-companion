@@ -108,7 +108,7 @@ function StartScreen({ onStart }) {
   const [role, setRole] = useState("Software Engineer");
   const [custom, setCustom] = useState("");
   return (
-    <div className="flex flex-col items-center justify-center h-full px-6 text-center">
+    <div className="flex flex-col items-center justify-center min-h-full px-4 md:px-6 py-8 md:py-0 text-center">
       <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center text-4xl mb-6 shadow-xl">
         🎤
       </div>
@@ -349,7 +349,7 @@ function InterviewContent() {
     const avgRating = answers.reduce((s, a) => s + (a.rating || 5), 0) / Math.max(answers.length, 1);
     return (
       <ProtectedLayout>
-        <div className="max-w-3xl mx-auto px-6 py-8">
+        <div className="max-w-3xl mx-auto px-4 md:px-6 py-6 md:py-8">
           <div className="text-center mb-8">
             <div className="text-5xl mb-3">🎉</div>
             <h1 className="text-2xl font-bold text-gray-900">Interview Complete!</h1>
@@ -443,12 +443,12 @@ function InterviewContent() {
   // ── Interview screen ──────────────────────────────────────────────────────────
   return (
     <ProtectedLayout>
-      <div className="flex h-screen overflow-hidden bg-gray-50">
+      <div className="flex overflow-hidden bg-gray-50 h-[calc(100vh-3.5rem-5rem)] md:h-screen">
 
         {/* Left: question + answer */}
         <div className="flex-1 flex flex-col overflow-hidden">
           {/* Progress header */}
-          <div className="bg-white border-b border-gray-200 px-6 py-3 flex-shrink-0">
+          <div className="bg-white border-b border-gray-200 px-4 md:px-6 py-3 flex-shrink-0">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-3">
                 <span className="text-sm font-bold text-gray-900">
@@ -473,7 +473,7 @@ function InterviewContent() {
           </div>
 
           {/* Question */}
-          <div className="px-6 pt-5 flex-shrink-0">
+          <div className="px-4 md:px-6 pt-4 md:pt-5 flex-shrink-0">
             {waitingForQ ? (
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex items-center gap-3">
                 <div className="w-5 h-5 border-2 border-violet-500 border-t-transparent rounded-full animate-spin" />
@@ -499,7 +499,7 @@ function InterviewContent() {
           </div>
 
           {/* Answer area */}
-          <div className="flex-1 px-6 py-4 overflow-y-auto">
+          <div className="flex-1 px-4 md:px-6 py-4 overflow-y-auto">
             {!waitingForQ && currentQ && !feedback && (
               isCoding ? (
                 <div className="space-y-2 h-full">
@@ -616,8 +616,8 @@ function InterviewContent() {
           </div>
         </div>
 
-        {/* Right: webcam + sidebar info */}
-        <div className="w-72 flex-shrink-0 border-l border-gray-200 bg-white flex flex-col p-4 gap-4">
+        {/* Right: webcam + sidebar info (desktop only) */}
+        <div className="hidden md:flex w-72 flex-shrink-0 border-l border-gray-200 bg-white flex-col p-4 gap-4">
           <WebcamPanel active={cameraOn} />
 
           <div className="space-y-2">

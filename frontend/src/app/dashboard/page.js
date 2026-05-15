@@ -353,7 +353,7 @@ export default function DashboardPage() {
       <div className="min-h-screen bg-gray-50">
 
         {/* ── Header ── */}
-        <div className="bg-white border-b border-gray-100 px-8 py-6">
+        <div className="bg-white border-b border-gray-100 px-4 md:px-8 py-4 md:py-6">
           <div className="max-w-6xl mx-auto flex items-center justify-between gap-4 flex-wrap">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-sm shadow-indigo-200 flex-shrink-0">
@@ -370,7 +370,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-8 py-6 space-y-6">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 py-4 md:py-6 space-y-6">
 
           {/* ── Stat cards ── */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
