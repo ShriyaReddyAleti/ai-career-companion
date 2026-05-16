@@ -375,9 +375,13 @@ ai-career-companion/
 
 ## Team
 
-**SJSU CS 157C — NoSQL Databases · Spring 2026**
+**G36 · Spring 2026**
 
-Built by: Shriya Reddy Aleti
+Built by: 
+Shriya Reddy Aleti
+Ajay Kumar Golla
+Paavani Karuturi 
+Sravani Linga
 
 ---
 
