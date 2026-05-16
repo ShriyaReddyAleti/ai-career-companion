@@ -340,7 +340,7 @@ ai-career-companion/
 **"AI service not responding" in chat**
 - Make sure Terminal E (chatbot on port 8005) is running
 - Verify `ANTHROPIC_API_KEY` is correctly set in your `.env` file
-- Make sure your Anthropic account has credit balance at https://console.anthropic.com
+- Make sure that your Anthropic account has credit balance at https://console.anthropic.com
 
 **Frontend shows blank screen**
 - Delete the Next.js cache: `rm -rf frontend/.next`
