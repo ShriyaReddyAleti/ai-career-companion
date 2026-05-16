@@ -378,10 +378,10 @@ ai-career-companion/
 **G36 · Spring 2026**
 
 Built by: 
-Shriya Reddy Aleti
-Ajay Kumar Golla
-Paavani Karuturi 
-Sravani Linga
+- Shriya Reddy Aleti
+- Ajay Kumar Golla
+- Paavani Karuturi 
+- Sravani Linga
 
 ---
 
